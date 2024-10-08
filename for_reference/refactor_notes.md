@@ -139,5 +139,55 @@ Remember, the choice between using an outer rx.box or not depends on your specif
 
 [library-layout](https://reflex.dev/docs/library/layout/)
 
+#!SECTION
+
+
+
+#SECTION - Fixed Height and Width of a screen - 20241008_004
+
+How do I adjust rx.grid_item size, especially height, with its content accoridingly?
+
+To adjust the size of rx.grid items, especially their height, to fit their content, you can use a combination of grid properties and styling. However, the Reflex documentation doesn't provide a direct method for automatically adjusting grid item sizes based on their content. Instead, we can use a combination of available properties to achieve a similar effect.
+
+Here are some approaches you can try:
+
+Use the height prop: You can set the height prop of each grid item to "auto" or a specific value. This can be done directly on the child components of the grid.
+
+rx.grid(
+    rx.box("Content 1", height="auto"),
+    rx.box("Content 2", height="auto"),
+    columns="2",
+    spacing="4",
+    width="100%",
+)
+
+Use CSS Grid properties: Reflex allows you to use CSS properties directly. You can use CSS Grid's auto-fit and minmax() functions to create responsive grid items.
+
+rx.grid(
+    rx.box("Content 1"),
+    rx.box("Content 2"),
+    grid_template_columns="repeat(auto-fit, minmax(200px, 1fr))",
+    grid_auto_rows="minmax(100px, auto)",
+    gap="1rem",
+    width="100%",
+)
+
+Use responsive design: Reflex supports responsive design. You can specify different layouts for different screen sizes.
+
+rx.grid(
+    rx.box("Content 1"),
+    rx.box("Content 2"),
+    columns=["1", "2", "3"],
+    spacing="4",
+    width="100%",
+)
+
+Remember, these are general approaches. The exact implementation will depend on your specific layout requirements and content. You may need to experiment with different combinations of properties to achieve the desired result.
+
+For more detailed information on grid properties and styling, you can refer to the Reflex documentation on layout and common props12.
+
+[styling-layout](https://reflex.dev/docs/styling/layout/)
+
+[styling-common-props](https://reflex.dev/docs/styling/common-props/)
 
 #!SECTION
