@@ -1,5 +1,7 @@
 
-#SECTION - Fixed Height and Width of a screen - 20241008_001
+#SECTION - Fixed Height and Width of a screen
+
+#SECTION - Dashboard
 
 I want to build a dashboard.
 The specific speficications are I want to fiexd the height of the screen.
@@ -50,7 +52,7 @@ If you need more specific guidance or have a particular layout in mind, please p
 
 
 
-#SECTION - Fixed Height and Width of a screen - 20241008_002
+#SECTION - Replace rx.flex with rc.grid
 
 I replace rx.flex with rc.grid.
 Is it possible that I could achieve the same result?
@@ -105,7 +107,7 @@ This will create a grid that adjusts its column count based on the screen size, 
 
 
 
-#SECTION - Fixed Height and Width of a screen - 20241008_003
+#SECTION - Why to use rx.box for the outer?
 
 Why do I need rx.box for the outer?
 
@@ -143,7 +145,7 @@ Remember, the choice between using an outer rx.box or not depends on your specif
 
 
 
-#SECTION - Fixed Height and Width of a screen - 20241008_004
+#SECTION - Adjust rx.grid_item size accordingly
 
 How do I adjust rx.grid_item size, especially height, with its content accoridingly?
 
@@ -189,5 +191,59 @@ For more detailed information on grid properties and styling, you can refer to t
 [styling-layout](https://reflex.dev/docs/styling/layout/)
 
 [styling-common-props](https://reflex.dev/docs/styling/common-props/)
+
+#!SECTION
+
+
+
+#SECTION - Multiple rx.text nested inside of rx.box to keep in the same line
+
+How could make multiple rx.text nested inside of rx.box to keep in the same line?
+
+To keep multiple rx.text components nested inside an rx.box on the same line, you can use the rx.flex component with the direction prop set to "row". Here's how you can achieve this:
+
+rx.box(
+    rx.flex(
+        rx.text("First text"),
+        rx.text("Second text"),
+        rx.text("Third text"),
+        direction="row",
+        spacing="2",
+    ),
+    background_color="var(--accent-2)",
+    padding="25px",
+)
+
+In this example1:
+
+The rx.flex component is used to create a flexible box layout.
+The direction prop is set to "row", which arranges the child elements horizontally.
+The spacing prop adds space between the text elements.
+The rx.box component is used as an outer container, allowing you to apply additional styling like background color and padding.
+If you need more control over the alignment of the text elements, you can use additional props on the rx.flex component:
+
+rx.box(
+    rx.flex(
+        rx.text("Left"),
+        rx.text("Center"),
+        rx.text("Right"),
+        direction="row",
+        justify="space-between",
+        align="center",
+        width="100%",
+    ),
+    background_color="var(--accent-2)",
+    padding="25px",
+)
+
+In this example:
+
+justify="space-between" spreads out the text elements across the available space.
+align="center" vertically centers the text elements.
+width="100%" makes the flex container take up the full width of its parent.
+These approaches allow you to keep multiple rx.text components on the same line while providing flexibility for layout and styling.
+
+#!SECTION
+
 
 #!SECTION
