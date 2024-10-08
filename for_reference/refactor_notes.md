@@ -1,7 +1,5 @@
 
-#NOTE - 20241008_001
-
-#SECTION - Fixed Height and Width of a screen
+#SECTION - Fixed Height and Width of a screen - 20241008_001
 
 I want to build a dashboard.
 The specific speficications are I want to fiexd the height of the screen.
@@ -42,17 +40,17 @@ Remember to adjust the heights and layout according to your specific dashboard d
 If you need more specific guidance or have a particular layout in mind, please provide more details about your dashboard structure, and I'll be happy to offer more tailored advice.
 
 
-[layout](https://reflex.dev/docs/styling/layout/)
+[styling-layout](https://reflex.dev/docs/styling/layout/)
 
-[common-props](https://reflex.dev/docs/styling/common-props/)
+[styling-common-props](https://reflex.dev/docs/styling/common-props/)
 
-[multi-column-row](https://reflex.dev/docs/recipes/content/multi-column-row/)
+[recipes-content-multi-column-row](https://reflex.dev/docs/recipes/content/multi-column-row/)
+
+#!SECTION
 
 
 
-#NOTE - 20241008_002
-
-#SECTION - Fixed Height and Width of a screen
+#SECTION - Fixed Height and Width of a screen - 20241008_002
 
 I replace rx.flex with rc.grid.
 Is it possible that I could achieve the same result?
@@ -99,7 +97,47 @@ rx.grid(
 
 This will create a grid that adjusts its column count based on the screen size, providing a responsive layout for your dashboard.
 
-[grid](https://reflex.dev/docs/library/layout/grid/)
+[library-layout-grid](https://reflex.dev/docs/library/layout/grid/)
 
-[responsive](https://reflex.dev/docs/styling/responsive/)
+[styling-responsive](https://reflex.dev/docs/styling/responsive/)
 
+#!SECTION
+
+
+
+#SECTION - Fixed Height and Width of a screen - 20241008_003
+
+Why do I need rx.box for the outer?
+
+You're right to question the need for an outer rx.box. In many cases, you may not need it, especially if you're using rx.grid as the main container for your dashboard. Let me explain why:
+
+The rx.grid component itself can be used to create the main container for your dashboard. According to the Reflex documentation, rx.grid is a layout component used to create complex responsive layouts based on a grid system1.
+
+You can apply the necessary styling properties directly to the rx.grid component to achieve the fixed height and width you want. Here's an example of how you could structure your dashboard using just rx.grid:
+
+rx.grid(
+    # Your dashboard components here
+    rx.box(
+        # Scrollable content here
+        height="calc(100vh - 100px)",  # Adjust based on your header/footer height
+        overflow="auto",
+    ),
+    columns="1",  # You can adjust this based on your layout needs
+    spacing="4",
+    width="100vw",
+    height="100vh",
+)
+
+In this example:
+
+The rx.grid component serves as the main container for your dashboard.
+The width and height props are set directly on the rx.grid to make it take up the full viewport.
+The inner rx.box is used for scrollable content, just as in the previous examples.
+This approach is more direct and eliminates the need for an outer rx.box. It achieves the same result of creating a fixed-size container for your dashboard.
+
+Remember, the choice between using an outer rx.box or not depends on your specific layout needs and how you want to structure your components. In some cases, an outer rx.box might be useful for additional styling or layout purposes, but in this scenario, it's not strictly necessary.
+
+[library-layout](https://reflex.dev/docs/library/layout/)
+
+
+#!SECTION
