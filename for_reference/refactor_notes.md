@@ -1,7 +1,9 @@
 
 #SECTION - Fixed Height and Width of a screen
 
-#SECTION - Dashboard
+
+
+#NOTE - Dashboard
 
 I want to build a dashboard.
 The specific speficications are I want to fiexd the height of the screen.
@@ -48,11 +50,9 @@ If you need more specific guidance or have a particular layout in mind, please p
 
 [recipes-content-multi-column-row](https://reflex.dev/docs/recipes/content/multi-column-row/)
 
-#!SECTION
 
 
-
-#SECTION - Replace rx.flex with rc.grid
+#NOTE - Replace rx.flex with rc.grid
 
 I replace rx.flex with rc.grid.
 Is it possible that I could achieve the same result?
@@ -103,11 +103,9 @@ This will create a grid that adjusts its column count based on the screen size, 
 
 [styling-responsive](https://reflex.dev/docs/styling/responsive/)
 
-#!SECTION
 
 
-
-#SECTION - Why to use rx.box for the outer?
+#NOTE - Why to use rx.box for the outer?
 
 Why do I need rx.box for the outer?
 
@@ -141,11 +139,9 @@ Remember, the choice between using an outer rx.box or not depends on your specif
 
 [library-layout](https://reflex.dev/docs/library/layout/)
 
-#!SECTION
 
 
-
-#SECTION - Adjust rx.grid_item size accordingly
+#NOTE - Adjust rx.grid_item size accordingly
 
 How do I adjust rx.grid_item size, especially height, with its content accoridingly?
 
@@ -192,11 +188,9 @@ For more detailed information on grid properties and styling, you can refer to t
 
 [styling-common-props](https://reflex.dev/docs/styling/common-props/)
 
-#!SECTION
 
 
-
-#SECTION - Multiple rx.text nested inside of rx.box to keep in the same line
+#NOTE - Multiple rx.text nested inside of rx.box to keep in the same line
 
 How could make multiple rx.text nested inside of rx.box to keep in the same line?
 
@@ -243,7 +237,6 @@ align="center" vertically centers the text elements.
 width="100%" makes the flex container take up the full width of its parent.
 These approaches allow you to keep multiple rx.text components on the same line while providing flexibility for layout and styling.
 
-#!SECTION
 
 
 #!SECTION
