@@ -48,3 +48,58 @@ If you need more specific guidance or have a particular layout in mind, please p
 
 [multi-column-row](https://reflex.dev/docs/recipes/content/multi-column-row/)
 
+
+
+#NOTE - 20241008_002
+
+#SECTION - Fixed Height and Width of a screen
+
+I replace rx.flex with rc.grid.
+Is it possible that I could achieve the same result?
+
+Yes, it is possible to achieve a similar result using rx.grid instead of rx.flex. The rx.grid component in Reflex is designed for creating grid layouts and can be used to structure your dashboard effectively.1
+
+Here's an example of how you could use rx.grid to create a dashboard layout with fixed height and width:
+
+rx.box(
+    rx.grid(
+        # Your dashboard components here
+        rx.box(
+            # Scrollable content here
+            height="calc(100vh - 100px)",  # Adjust based on your header/footer height
+            overflow="auto",
+        ),
+        columns="1",  # You can adjust this based on your layout needs
+        spacing="4",
+        width="100%",
+        height="100%",
+    ),
+    height="100vh",
+    width="100vw",
+)
+
+In this example:
+
+The outer rx.box sets the fixed height and width to the full viewport, just like in the previous example.
+The rx.grid component is used instead of rx.flex to create the layout for your dashboard.
+The columns prop is set to "1", but you can adjust this based on your specific layout needs.
+The spacing prop is used to add gaps between grid items if needed.
+The inner rx.box for scrollable content remains the same as in the flex example.
+Remember that with rx.grid, you have more control over the layout in terms of rows and columns. You can adjust the columns prop to create more complex layouts, and use the rows prop if you need to specify row layouts as well.
+
+For a more responsive design, you can use Reflex's responsive features with the grid layout:
+
+rx.grid(
+    # Your dashboard components here
+    columns=["1", "2", "3"],  # Adjust columns for different screen sizes
+    spacing="4",
+    width="100%",
+    height="100vh",
+)
+
+This will create a grid that adjusts its column count based on the screen size, providing a responsive layout for your dashboard.
+
+[grid](https://reflex.dev/docs/library/layout/grid/)
+
+[responsive](https://reflex.dev/docs/styling/responsive/)
+
