@@ -1,5 +1,10 @@
 """Welcome to Reflex! This file outlines the steps to create a basic app."""
 
+# Environment: Reflex0_6_py3_12_5
+# Python version: 3.12.5
+# Reflex version: 0.6.1
+
+
 #import reflex as rx
 #from rxconfig import config
 #class State(rx.State):
@@ -39,8 +44,7 @@ from rxconfig import config
 
 from .components import gen_area_1_block_cells, gen_area_2_block_cells
 from .states import MachinesState
-
-#from .styles import style
+from .styles import style
 
 
 def data_edit_tab() -> rx.Component:
@@ -84,3 +88,6 @@ def index() -> rx.Component:
         defalut_value="tab1",
         orientation="horizontal"
     ) # rx.tab.root
+
+app = rx.App(style=style)
+app.add_page(index)
