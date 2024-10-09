@@ -12,22 +12,20 @@ def gen_machine_grid_cell(machine_id: str,
     return rc.grid_item(
         rx.box(
             rx.flex(
-                rx.text(f"機台："),
-                rx.text(f"{MachinesState.machines_content[machine_id]['machine_id']}"),
-                rx.text(f"  |-->|  ", white_space="pre"),
-                rx.text(f"操作者："),
-                rx.text(f"{MachinesState.machines_content[machine_id]['engineer_name']}"),
+                rx.text(f"機台：", weight='bold', size='4'),
+                rx.text(f"{MachinesState.machines_content[machine_id]['machine_id']}", weight='medium', size='4', high_contrast=True, color_scheme='bronze'),
+                rx.text(f" |=> ", white_space="pre", size='4'),
+                rx.text(f"操作者：", weight='bold', size='4'),
+                rx.text(f"{MachinesState.machines_content[machine_id]['engineer_name']}", weight='medium', size='4', high_contrast=True, color_scheme='bronze'),
                 direction='row',
-                #spacing='1',
             ), # rx.flex
             rx.flex(
-                rx.text(f"件號："),
-                rx.text(f"{MachinesState.machines_content[machine_id]['prod_op']}"),
-                rx.text(f"  |-->|  ", white_space="pre"),
-                rx.text(f"數量："),
-                rx.text(f"{MachinesState.machines_content[machine_id]['target_qty']}"),
+                rx.text(f"件號：", weight='bold', size='4'),
+                rx.text(f"{MachinesState.machines_content[machine_id]['prod_op']}", weight='medium', size='4', high_contrast=True, color_scheme='bronze'),
+                rx.text(f" |=> ", white_space="pre", size='4'),
+                rx.text(f"數量：", weight='bold', size='4'),
+                rx.text(f"{MachinesState.machines_content[machine_id]['target_qty']}", weight='medium', size='4', high_contrast=True, color_scheme='bronze'),
                 direction='row',
-                #spacing='1',
             ), # rx.flex
         ), # rx.box
         col_start=col_start,
