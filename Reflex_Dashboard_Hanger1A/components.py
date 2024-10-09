@@ -14,20 +14,20 @@ def gen_machine_grid_cell(machine_id: str,
             rx.flex(
                 rx.text(f"機台："),
                 rx.text(f"{MachinesState.machines_content[machine_id]['machine_id']}"),
-                rx.text(f"|->|"),
+                rx.text(f"  |-->|  ", white_space="pre"),
                 rx.text(f"操作者："),
                 rx.text(f"{MachinesState.machines_content[machine_id]['engineer_name']}"),
                 direction='row',
-                spacing='1',
+                #spacing='1',
             ), # rx.flex
             rx.flex(
                 rx.text(f"件號："),
                 rx.text(f"{MachinesState.machines_content[machine_id]['prod_op']}"),
-                rx.text(f"|->|"),
+                rx.text(f"  |-->|  ", white_space="pre"),
                 rx.text(f"數量："),
                 rx.text(f"{MachinesState.machines_content[machine_id]['target_qty']}"),
                 direction='row',
-                spacing='1',
+                #spacing='1',
             ), # rx.flex
         ), # rx.box
         col_start=col_start,
