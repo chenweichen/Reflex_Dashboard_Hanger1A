@@ -61,15 +61,19 @@ def data_edit_tab() -> rx.Component:
     )
 
 def data_presentation_tab() -> rx.Component:
-    return rc.grid(
-        *gen_area_1_block_cells(),
-        *gen_area_2_block_cells(),
-        template_rows="repeat(10, 1fr)",
-        template_columns="repeat(4, 1fr)",
-        height="10em",
-        width="100%",
-        gap=2,
-    )
+    return rx.box(
+        rc.grid(
+            *gen_area_1_block_cells(),
+            *gen_area_2_block_cells(),
+            template_rows='repeat(10, 1fr)',
+            template_columns='repeat(4, 1fr)',
+            height='100%',
+            width='100%',
+            gap=2,
+        ), # rc.grid
+        height='100vh', # height for rx.box
+        width='vw', # width for rx.box
+    ) # rx.box
 
 def index() -> rx.Component:
     return rx.tabs.root(
