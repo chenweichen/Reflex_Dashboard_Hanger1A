@@ -72,7 +72,7 @@ def data_presentation_tab() -> rx.Component:
             gap=2,
         ), # rc.grid
         height='100vh', # height for rx.box
-        width='vw', # width for rx.box
+        width='100vw', # width for rx.box
     ) # rx.box
 
 def index() -> rx.Component:
