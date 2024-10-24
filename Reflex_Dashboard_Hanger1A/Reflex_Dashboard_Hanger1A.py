@@ -39,12 +39,19 @@
 
 import reflex as rx
 import reflex_chakra as rc
+from reflex.components.datadisplay.dataeditor import DataEditorTheme
 
 from rxconfig import config
 
 from .components import gen_area_1_block_cells, gen_area_2_block_cells
 from .states import MachinesState
 from .styles import style
+
+data_editor_theme_case = {
+    "header_font_style": "bold 2.5vmin",
+    "base_font_style": "2.5vmin", #20241024_01:1.3em, 
+}
+
 
 
 def data_edit_tab() -> rx.Component:
@@ -57,6 +64,10 @@ def data_edit_tab() -> rx.Component:
             data=MachinesState.machine_data,
             on_cell_clicked=MachinesState.click_cell,
             on_cell_edited=MachinesState.handle_cell_edit,
+            theme=DataEditorTheme(**data_editor_theme_case),
+            header_height=70,
+            row_height=65,
+            max_column_width=120,
         )
     )
 
