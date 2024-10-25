@@ -175,19 +175,19 @@ class MachinesState(rx.State):
 
     cols: list[dict[str, str]] = [
         {
-            'title':'MACHINE',
+            'title':'機台代號', #NOTE - MACHINE: machine_id
             'type':'str'
         },
         {
-            'title':'PRODUCT',
+            'title':'件號', #NOTE - PRODUCT: prod_op
             'type':'str'
         },
         {
-            'title':'QUANTITY',
+            'title':'數量', #NOTE - QUANTITY: target_qty
             'type':'int'
         },
         {
-            'title':'ENGINEER',
+            'title':'操作者', #NOTE - ENGINEER: engineer_name
             'type':'str'
         }
     ]

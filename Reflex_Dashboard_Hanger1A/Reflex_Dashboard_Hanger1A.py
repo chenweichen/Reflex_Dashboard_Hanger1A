@@ -49,10 +49,8 @@ from .styles import style
 
 data_editor_theme_case = {
     "header_font_style": "bold 2.5vmin",
-    "base_font_style": "2.5vmin", #20241024_01:1.3em, 
+    "base_font_style": "2.5vmin", #20241024_01:1.3em, #20241025_01: test dvw, dvh or dvmin=min(dvh, dvw)
 }
-
-
 
 def data_edit_tab() -> rx.Component:
     return rx.container(
@@ -71,7 +69,9 @@ def data_edit_tab() -> rx.Component:
         )
     )
 
-def data_presentation_tab() -> rx.Component:
+#TODO - Make data_presentation_tab generalized
+#NOTE - data_presentation_tab(gen_area_1_block_cells(), gen_area_1_block_cells())
+def data_presentation_tab_abandon() -> rx.Component:
     return rx.box(
         rc.grid(
             *gen_area_1_block_cells(),
@@ -86,19 +86,50 @@ def data_presentation_tab() -> rx.Component:
         width='100vw', # width for rx.box
     ) # rx.box
 
+def data_presentation_tab(block_cells_1: list[rx.Component], block_cells_2: list[rx.Component]) -> rx.Component:
+    return rx.box(
+        rc.grid(
+            *block_cells_1(),
+            *block_cells_2(),
+            template_rows='repeat(10, 1fr)',
+            template_columns='repeat(4, 1fr)',
+            height='100%',
+            width='100%',
+            gap=2,
+        ), # rc.grid
+        height='100vh', # height for rx.box 
+    ) # rx.box
+
+
+
 def index() -> rx.Component:
     return rx.tabs.root(
         rx.tabs.list(
             rx.tabs.trigger("Data edit tab", value="tab1"),
-            rx.tabs.trigger("Presentation tab", value="tab2"),
+            rx.tabs.trigger("First Period", value="tab2"),  #NOTE - 1st period
+            rx.tabs.trigger("Second Period", value="tab3"), #NOTE - 2nd period
+            rx.tabs.trigger("Third Period", value="tab4"),  #NOTE - 3rd period
+            rx.tabs.trigger("Fourth Period", value="tab5"), #NOTE - 4th period
         ), # rx.tabs.list
         rx.tabs.content(
             data_edit_tab(),
             value="tab1",
         ),
-        rx.tabs.content(
-            data_presentation_tab(),
+        rx.tabs.content( #TODO - 1st period
+            data_presentation_tab(gen_area_1_block_cells, gen_area_2_block_cells),
             value="tab2",
+        ),
+        rx.tabs.content( #TODO - 2nd period
+            data_presentation_tab(gen_area_1_block_cells, gen_area_2_block_cells),
+            value="tab3",
+        ),
+        rx.tabs.content( #TODO - 3rd period
+            data_presentation_tab(gen_area_1_block_cells, gen_area_2_block_cells),
+            value="tab4",
+        ),
+        rx.tabs.content( #TODO - 4th period
+            data_presentation_tab(gen_area_1_block_cells, gen_area_2_block_cells),
+            value="tab5",
         ),
         defalut_value="tab1",
         orientation="horizontal"
