@@ -37,13 +37,16 @@
 #app.add_page(index)
 
 
+from typing import Callable
+
 import reflex as rx
 import reflex_chakra as rc
 from reflex.components.datadisplay.dataeditor import DataEditorTheme
 
 from rxconfig import config
 
-from .components import gen_area_1_block_cells, gen_area_2_block_cells
+from .components import (gen_area_1_block_cells_period_1,
+                         gen_area_2_block_cells_period_1)
 from .states import MachinesState
 from .styles import style
 
@@ -59,9 +62,9 @@ def data_edit_tab() -> rx.Component:
         rx.text(f'{MachinesState.edited_data}'),
         rx.data_editor(
             columns=MachinesState.cols,
-            data=MachinesState.machine_data,
+            data=MachinesState.machine_data_exp, # MachineState.machine_data (@rx.var)
             on_cell_clicked=MachinesState.click_cell,
-            on_cell_edited=MachinesState.handle_cell_edit,
+            on_cell_edited=MachinesState.handle_cell_edit_exp, # MachineState.handle_cell_edit
             theme=DataEditorTheme(**data_editor_theme_case),
             header_height=70,
             row_height=65,
@@ -69,24 +72,8 @@ def data_edit_tab() -> rx.Component:
         )
     )
 
-#TODO - Make data_presentation_tab generalized
-#NOTE - data_presentation_tab(gen_area_1_block_cells(), gen_area_1_block_cells())
-def data_presentation_tab_abandon() -> rx.Component:
-    return rx.box(
-        rc.grid(
-            *gen_area_1_block_cells(),
-            *gen_area_2_block_cells(),
-            template_rows='repeat(10, 1fr)',
-            template_columns='repeat(4, 1fr)',
-            height='100%',
-            width='100%',
-            gap=2,
-        ), # rc.grid
-        height='100vh', # height for rx.box
-        width='100vw', # width for rx.box
-    ) # rx.box
 
-def data_presentation_tab(block_cells_1: list[rx.Component], block_cells_2: list[rx.Component]) -> rx.Component:
+def data_presentation_tab(block_cells_1: Callable, block_cells_2: Callable) -> rx.Component:
     return rx.box(
         rc.grid(
             *block_cells_1(),
@@ -99,8 +86,6 @@ def data_presentation_tab(block_cells_1: list[rx.Component], block_cells_2: list
         ), # rc.grid
         height='100vh', # height for rx.box 
     ) # rx.box
-
-
 
 def index() -> rx.Component:
     return rx.tabs.root(
@@ -116,19 +101,19 @@ def index() -> rx.Component:
             value="tab1",
         ),
         rx.tabs.content( #TODO - 1st period
-            data_presentation_tab(gen_area_1_block_cells, gen_area_2_block_cells),
+            data_presentation_tab(gen_area_1_block_cells_period_1, gen_area_2_block_cells_period_1),
             value="tab2",
         ),
         rx.tabs.content( #TODO - 2nd period
-            data_presentation_tab(gen_area_1_block_cells, gen_area_2_block_cells),
+            data_presentation_tab(gen_area_1_block_cells_period_1, gen_area_2_block_cells_period_1),
             value="tab3",
         ),
         rx.tabs.content( #TODO - 3rd period
-            data_presentation_tab(gen_area_1_block_cells, gen_area_2_block_cells),
+            data_presentation_tab(gen_area_1_block_cells_period_1, gen_area_2_block_cells_period_1),
             value="tab4",
         ),
         rx.tabs.content( #TODO - 4th period
-            data_presentation_tab(gen_area_1_block_cells, gen_area_2_block_cells),
+            data_presentation_tab(gen_area_1_block_cells_period_1, gen_area_2_block_cells_period_1),
             value="tab5",
         ),
         defalut_value="tab1",
