@@ -22,7 +22,7 @@ class MachinesState(rx.State):
             "engineer_name":"阮黃英 F351"},
             ###
             "period_2":{
-            "prod_op":"M77-OP15", 
+            "prod_op":"M77-OP1155", #M77-OP15
             "target_qty":20, 
             "engineer_name":"阮黃英 F351"},
             ###

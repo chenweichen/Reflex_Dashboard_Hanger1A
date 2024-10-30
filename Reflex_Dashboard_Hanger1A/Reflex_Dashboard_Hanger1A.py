@@ -45,8 +45,7 @@ from reflex.components.datadisplay.dataeditor import DataEditorTheme
 
 from rxconfig import config
 
-from .components import (gen_area_1_block_cells_period_1,
-                         gen_area_2_block_cells_period_1)
+from .components import gen_area_1_block_cells, gen_area_2_block_cells
 from .states import MachinesState
 from .styles import style
 
@@ -73,11 +72,15 @@ def data_edit_tab() -> rx.Component:
     )
 
 
-def data_presentation_tab(block_cells_1: Callable, block_cells_2: Callable) -> rx.Component:
+def data_presentation_tab(block_cells_1: list, # Callable 
+                          block_cells_2: list # Callable
+                          ) -> rx.Component:
     return rx.box(
         rc.grid(
-            *block_cells_1(),
-            *block_cells_2(),
+            *block_cells_1,
+            *block_cells_2,
+            #*block_cells_1(),
+            #*block_cells_2(),
             template_rows='repeat(10, 1fr)',
             template_columns='repeat(4, 1fr)',
             height='100%',
@@ -100,20 +103,20 @@ def index() -> rx.Component:
             data_edit_tab(),
             value="tab1",
         ),
-        rx.tabs.content( #TODO - 1st period
-            data_presentation_tab(gen_area_1_block_cells_period_1, gen_area_2_block_cells_period_1),
+        rx.tabs.content( #TODO - 1st period               
+            data_presentation_tab(gen_area_1_block_cells('period_1'), gen_area_2_block_cells('period_1')),
             value="tab2",
         ),
         rx.tabs.content( #TODO - 2nd period
-            data_presentation_tab(gen_area_1_block_cells_period_1, gen_area_2_block_cells_period_1),
+            data_presentation_tab(gen_area_1_block_cells('period_2'), gen_area_2_block_cells('period_2')),
             value="tab3",
         ),
         rx.tabs.content( #TODO - 3rd period
-            data_presentation_tab(gen_area_1_block_cells_period_1, gen_area_2_block_cells_period_1),
+            data_presentation_tab(gen_area_1_block_cells('period_3'), gen_area_2_block_cells('period_3')),
             value="tab4",
         ),
         rx.tabs.content( #TODO - 4th period
-            data_presentation_tab(gen_area_1_block_cells_period_1, gen_area_2_block_cells_period_1),
+            data_presentation_tab(gen_area_1_block_cells('period_4'), gen_area_2_block_cells('period_4')),
             value="tab5",
         ),
         defalut_value="tab1",

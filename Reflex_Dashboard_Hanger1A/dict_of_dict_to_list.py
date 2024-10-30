@@ -70,6 +70,9 @@ mcahines_content:dict[str, dict[str, str|dict[str, str|int]]] = {
         },
     },
 }
+
+print(f"{mcahines_content['vmc001']['period_1']['prod_op']=}\n")
+
 #print(f"{mcahines_content.keys()=} \n")
 #print(f"{mcahines_content.values()=} \n")
 
