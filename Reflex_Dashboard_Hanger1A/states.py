@@ -22,18 +22,18 @@ class MachinesState(rx.State):
             "engineer_name":"阮黃英 F351"},
             ###
             "period_2":{
-            "prod_op":"M77-OP1155", #M77-OP15
-            "target_qty":20, 
+            "prod_op":"M77-OP15",
+            "target_qty":100, 
             "engineer_name":"阮黃英 F351"},
             ###
             "period_3":{
             "prod_op":"M77-OP15", 
-            "target_qty":20, 
+            "target_qty":200, 
             "engineer_name":"阮黃英 F351"},
             ###
             "period_4":{
             "prod_op":"M77-OP15", 
-            "target_qty":20, 
+            "target_qty":300, 
             "engineer_name":"阮黃英 F351"},
             },
 
@@ -46,15 +46,15 @@ class MachinesState(rx.State):
             "engineer_name":"范文成 F279"},
             "period_2":{
             "prod_op":"M77-OP15", 
-            "target_qty":20, 
+            "target_qty":300, 
             "engineer_name":"范文成 F279"},
             "period_3":{
             "prod_op":"M77-OP15", 
-            "target_qty":20, 
+            "target_qty":200, 
             "engineer_name":"范文成 F279"},
             "period_4":{
             "prod_op":"M77-OP15", 
-            "target_qty":20, 
+            "target_qty":100, 
             "engineer_name":"范文成 F279"},
             },
 
@@ -67,15 +67,15 @@ class MachinesState(rx.State):
             "engineer_name":"范文成 F279"},
             "period_2":{
             "prod_op":"M77-OP30", 
-            "target_qty":16, 
+            "target_qty":0, 
             "engineer_name":"范文成 F279"},
             "period_3":{
             "prod_op":"M77-OP30", 
-            "target_qty":16, 
+            "target_qty":0, 
             "engineer_name":"范文成 F279"},
             "period_4":{
             "prod_op":"M77-OP30", 
-            "target_qty":16, 
+            "target_qty":0, 
             "engineer_name":"范文成 F279"},
             },
 
@@ -88,15 +88,15 @@ class MachinesState(rx.State):
             "engineer_name":"范文成 F279"},
             "period_2":{
             "prod_op":"M77-OP20", 
-            "target_qty":16, 
+            "target_qty":0, 
             "engineer_name":"范文成 F279"},
             "period_3":{
             "prod_op":"M77-OP20", 
-            "target_qty":16, 
+            "target_qty":0, 
             "engineer_name":"范文成 F279"},
             "period_4":{
             "prod_op":"M77-OP20", 
-            "target_qty":16, 
+            "target_qty":0, 
             "engineer_name":"范文成 F279"},
             },
 
@@ -510,65 +510,65 @@ class MachinesState(rx.State):
         },
         ###
         {
-            'group':'Period-1',
+            'group':'第 1 班',
             'title':'件號', #NOTE - PRODUCT: prod_op
             'type':'str'
         },
         {
-            'group':'Period-1',
+            'group':'第 1 班',
             'title':'數量', #NOTE - QUANTITY: target_qty
             'type':'int'
         },
         {
-            'group':'Period-1',
+            'group':'第 1 班',
             'title':'操作者', #NOTE - ENGINEER: engineer_name
             'type':'str'
         },
         ###
         {
-            'group':'Period-2',
+            'group':'第 2 班',
             'title':'件號', #NOTE - PRODUCT: prod_op
             'type':'str'
         },
         {
-            'group':'Period-2',
+            'group':'第 2 班',
             'title':'數量', #NOTE - QUANTITY: target_qty
             'type':'int'
         },
         {
-            'group':'Period-2',
+            'group':'第 2 班',
             'title':'操作者', #NOTE - ENGINEER: engineer_name
             'type':'str'
         },
         ###
         {
-            'group':'Period-3',
+            'group':'第 3 班',
             'title':'件號', #NOTE - PRODUCT: prod_op
             'type':'str'
         },
         {
-            'group':'Period-3',
+            'group':'第 3 班',
             'title':'數量', #NOTE - QUANTITY: target_qty
             'type':'int'
         },
         {
-            'group':'Period-3',
+            'group':'第 3 班',
             'title':'操作者', #NOTE - ENGINEER: engineer_name
             'type':'str'
         },
         ###
         {
-            'group':'Period-4',
+            'group':'第 4 班',
             'title':'件號', #NOTE - PRODUCT: prod_op
             'type':'str'
         },
         {
-            'group':'Period-4',
+            'group':'第 4 班',
             'title':'數量', #NOTE - QUANTITY: target_qty
             'type':'int'
         },
         {
-            'group':'Period-4',
+            'group':'第 4 班',
             'title':'操作者', #NOTE - ENGINEER: engineer_name
             'type':'str'
         },
@@ -579,7 +579,7 @@ class MachinesState(rx.State):
     def convert_dict_to_list(self, data:dict[str, dict[str, str|int]]) -> list[list[Any]]:
         return [list(inner_dict.values()) for inner_dict in data.values()]
     
-    def convert_dict_to_list_exp(self, data:dict[str, dict[str, str|dict[str, str|int]]]):
+    def convert_dict_to_list(self, data:dict[str, dict[str, str|dict[str, str|int]]]):
         unpack_1 = [list(inner_dict_element.values()) for inner_dict_element in data.values()]
         unpack_2 = []
         for i in unpack_1:
@@ -591,18 +591,10 @@ class MachinesState(rx.State):
                     temp_list.append(d)
             unpack_2.append(temp_list)
         return unpack_2
-
-    
-    
-    #TODO - How to Convert dict of dict to List?
-    #@rx.var
-    #def machine_data(self) -> list[list[Any]]:
-    #    return self.convert_dict_to_list(self.machines_content)
     
     @rx.var
-    def machine_data_exp(self) -> list[list[Any]]:
-        return self.convert_dict_to_list_exp(self.machines_content)
-    
+    def machine_data(self) -> list[list[Any]]:
+        return self.convert_dict_to_list(self.machines_content)
     
     def click_cell(self, pos):
         col, row = pos
@@ -610,13 +602,6 @@ class MachinesState(rx.State):
 
     def get_clicked_data(self, pos) -> None:
         self.clicked_data = f'Cell clicked: {pos}'
-
-    #def handle_cell_edit(self, pos, val) -> None:
-    #    col, row = pos
-    #    machine_id = list(self.machines_content.keys())[row]
-    #    field = list(self.machines_content[machine_id].keys())[col]
-    #    self.edited_data = f'Cell edited: {pos}, Cell value: {val["data"]}'
-    #    self.machines_content[machine_id][field] = val['data']
 
     def field_helper_col_period(self, col_num):
         if col_num in (0, ):
@@ -647,7 +632,7 @@ class MachinesState(rx.State):
         else:
             self.machines_content[machine_id][ret_period][ret_col_name] = value['data']
 
-    def handle_cell_edit_exp(self, pos, val) -> None:
+    def handle_cell_edit(self, pos, val) -> None:
         col, row = pos
         machine_id = list(self.machines_content.keys())[row] # eg: [MAM01017, MAM01019, MAM01020]
         self.edited_data = f'Cell edited: {pos}, Cell value: {val["data"]}' # To be confirm

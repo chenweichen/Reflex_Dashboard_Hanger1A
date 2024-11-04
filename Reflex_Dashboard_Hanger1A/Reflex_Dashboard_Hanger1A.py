@@ -55,32 +55,37 @@ data_editor_theme_case = {
 }
 
 def data_edit_tab() -> rx.Component:
-    return rx.container(
+    return rx.box( # rx.container
         rx.heading(f'Data Edit Tab'),
         rx.text(f'{MachinesState.clicked_data}'),
         rx.text(f'{MachinesState.edited_data}'),
         rx.data_editor(
             columns=MachinesState.cols,
-            data=MachinesState.machine_data_exp, # MachineState.machine_data (@rx.var)
+            data=MachinesState.machine_data, # @rx.var
             on_cell_clicked=MachinesState.click_cell,
-            on_cell_edited=MachinesState.handle_cell_edit_exp, # MachineState.handle_cell_edit
+            on_cell_edited=MachinesState.handle_cell_edit,
             theme=DataEditorTheme(**data_editor_theme_case),
             header_height=70,
             row_height=65,
             max_column_width=120,
-        )
+            freeze_columns=1, # The number of columns which should remain in place when scrolling horizontally.
+            smooth_scroll_x=True,
+            smooth_scroll_y=True,
+            column_select='multi',
+            overscroll_y=2,
+        ),
+        width='43vw', #TODO - Does it fit into the big screen?
+        height='55vh', #TODO - Does it fit into the big screen?
     )
 
 
-def data_presentation_tab(block_cells_1: list, # Callable 
-                          block_cells_2: list # Callable
+def data_presentation_tab(block_cells_1: list,  
+                          block_cells_2: list
                           ) -> rx.Component:
     return rx.box(
         rc.grid(
             *block_cells_1,
             *block_cells_2,
-            #*block_cells_1(),
-            #*block_cells_2(),
             template_rows='repeat(10, 1fr)',
             template_columns='repeat(4, 1fr)',
             height='100%',
@@ -94,10 +99,10 @@ def index() -> rx.Component:
     return rx.tabs.root(
         rx.tabs.list(
             rx.tabs.trigger("Data edit tab", value="tab1"),
-            rx.tabs.trigger("First Period", value="tab2"),  #NOTE - 1st period
-            rx.tabs.trigger("Second Period", value="tab3"), #NOTE - 2nd period
-            rx.tabs.trigger("Third Period", value="tab4"),  #NOTE - 3rd period
-            rx.tabs.trigger("Fourth Period", value="tab5"), #NOTE - 4th period
+            rx.tabs.trigger("第 1 班", value="tab2"),  #NOTE - 1st period
+            rx.tabs.trigger("第 2 班", value="tab3"),  #NOTE - 2nd period
+            rx.tabs.trigger("第 3 班", value="tab4"),  #NOTE - 3rd period
+            rx.tabs.trigger("第 4 班", value="tab5"),  #NOTE - 4th period
         ), # rx.tabs.list
         rx.tabs.content(
             data_edit_tab(),
