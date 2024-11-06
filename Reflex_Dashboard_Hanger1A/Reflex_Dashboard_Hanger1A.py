@@ -67,15 +67,15 @@ def data_edit_tab() -> rx.Component:
             theme=DataEditorTheme(**data_editor_theme_case),
             header_height=70,
             row_height=65,
-            max_column_width=120,
+            max_column_width=120, #120
             freeze_columns=1, # The number of columns which should remain in place when scrolling horizontally.
             smooth_scroll_x=True,
             smooth_scroll_y=True,
             column_select='multi',
             overscroll_y=2,
         ),
-        width='43vw', #TODO - Does it fit into the big screen?
-        height='55vh', #TODO - Does it fit into the big screen?
+        width='40vw', #TODO - Does it fit into the big screen?
+        height='85vh', #TODO - Does it fit into the big screen?
     )
 
 
@@ -109,19 +109,19 @@ def index() -> rx.Component:
             value="tab1",
         ),
         rx.tabs.content( #TODO - 1st period               
-            data_presentation_tab(gen_area_1_block_cells('period_1'), gen_area_2_block_cells('period_1')),
+            data_presentation_tab(gen_area_1_block_cells('period_1', '第 1 班'), gen_area_2_block_cells('period_1')),
             value="tab2",
         ),
         rx.tabs.content( #TODO - 2nd period
-            data_presentation_tab(gen_area_1_block_cells('period_2'), gen_area_2_block_cells('period_2')),
+            data_presentation_tab(gen_area_1_block_cells('period_2', '第 2 班'), gen_area_2_block_cells('period_2')),
             value="tab3",
         ),
         rx.tabs.content( #TODO - 3rd period
-            data_presentation_tab(gen_area_1_block_cells('period_3'), gen_area_2_block_cells('period_3')),
+            data_presentation_tab(gen_area_1_block_cells('period_3', '第 3 班'), gen_area_2_block_cells('period_3')),
             value="tab4",
         ),
         rx.tabs.content( #TODO - 4th period
-            data_presentation_tab(gen_area_1_block_cells('period_4'), gen_area_2_block_cells('period_4')),
+            data_presentation_tab(gen_area_1_block_cells('period_4', '第 4 班'), gen_area_2_block_cells('period_4')),
             value="tab5",
         ),
         defalut_value="tab1",

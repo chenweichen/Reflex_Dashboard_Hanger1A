@@ -56,12 +56,26 @@ def gen_machine_grid_cell(machine_id: str,
         class_name=[*css_classes],
     )
 
+def gen_title_grid_cell(title_period: str,
+                        row_start:int, row_end: str,
+                        col_start:int, col_end: str,
+                        css_classes: list[str],
+                        size_of_font: str ) -> rx.Component:
+    return rc.grid_item(
+        rx.box(
+            rx.text(f"班別：{title_period}", weight='bold', font_size=size_of_font),
+        ), # rx.box
+        col_start=col_start,
+        col_end=col_end,
+        row_start=row_start,
+        row_end=row_end,
+        class_name=[*css_classes],
+    ) # rx.grid_item
 
 
-
-
-def gen_area_1_block_cells(outer_period: str) -> list[rx.Component]:
+def gen_area_1_block_cells(outer_period: str, outer_title_period: str) -> list[rx.Component]:
     return [ # 13
+        gen_title_grid_cell(outer_title_period, 1, '2', 1, '2', ['cell-border', 'cell-bgc-1'], "4.15vmin"), # Title of Period
         gen_machine_grid_cell('VMC08024', outer_period, 2, '3', 1, '2',   ['cell-border', 'cell-bgc-1'], "1.85vmin"),
         gen_machine_grid_cell('VMC08026', outer_period, 3, '4', 1, '2',   ['cell-border', 'cell-bgc-1'], "1.85vmin"),
         gen_machine_grid_cell('VMC08018', outer_period, 4, '5', 1, '2',   ['cell-border', 'cell-bgc-1'], "1.85vmin"),
