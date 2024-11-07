@@ -4,7 +4,6 @@ from typing import Any
 import reflex as rx
 
 
-#TODO - Change MachinesState keys' name
 class MachinesState(rx.State):
     clicked_data: str = "Cell clicked: "
     edited_data: str = "Cell edited: "
@@ -33,8 +32,9 @@ class MachinesState(rx.State):
             ###
             "period_4":{
             "prod_op":"M77-OP15", 
-            "target_qty":300, 
+            "target_qty":200, 
             "engineer_name":"阮黃英 F351"},
+            ###
             },
 
         "VMC08026":{
@@ -54,7 +54,7 @@ class MachinesState(rx.State):
             "engineer_name":"范文成 F279"},
             "period_4":{
             "prod_op":"M77-OP15", 
-            "target_qty":100, 
+            "target_qty":200, 
             "engineer_name":"范文成 F279"},
             },
 
@@ -265,7 +265,7 @@ class MachinesState(rx.State):
             "period_4":{
             "prod_op":"M76-OP30", 
             "target_qty":24, 
-            "engineer_name":"范文成 F279"}, 
+            "engineer_name":"范文成 F279"},
             },
 
         "VMC08021":{
@@ -286,7 +286,7 @@ class MachinesState(rx.State):
             "period_4":{
             "prod_op":"M76-OP30", 
             "target_qty":24, 
-            "engineer_name":"范文成 F279"}, 
+            "engineer_name":"范文成 F279"},
             },
         "VMC08013":{
             "machine_id":"VMC08013", 
@@ -306,7 +306,7 @@ class MachinesState(rx.State):
             "period_4":{
             "prod_op":"M76-OP40", 
             "target_qty":8, 
-            "engineer_name":"范智南 F243"}, 
+            "engineer_name":"范智南 F243"},
             },
 
         "VMC08012":{
@@ -327,7 +327,7 @@ class MachinesState(rx.State):
             "period_4":{
             "prod_op":"M76-OP40", 
             "target_qty":16, 
-            "engineer_name":"范智南 F243"}, 
+            "engineer_name":"范智南 F243"},
             },
 
         "VMC08019":{
@@ -348,7 +348,7 @@ class MachinesState(rx.State):
             "period_4":{
             "prod_op":"M76-OP40", 
             "target_qty":8, 
-            "engineer_name":"范智南 F243"}, 
+            "engineer_name":"范智南 F243"},
             },
 
         "MAM01021":{
@@ -369,7 +369,7 @@ class MachinesState(rx.State):
             "period_4":{
             "prod_op":"M77-OP70", 
             "target_qty":8, 
-            "engineer_name":"阮文黃 F297"}, 
+            "engineer_name":"阮文黃 F297"},
             },
 
         "MAM01010":{
@@ -390,7 +390,7 @@ class MachinesState(rx.State):
             "period_4":{
             "prod_op":"M75-OP40", 
             "target_qty":12, 
-            "engineer_name":"阮文陽 F271"}, 
+            "engineer_name":"阮文陽 F271"},
             },
         "MAM01013":{
             "machine_id":"MAM01013", 
@@ -410,7 +410,7 @@ class MachinesState(rx.State):
             "period_4":{
             "prod_op":"M75-OP40", 
             "target_qty":12, 
-            "engineer_name":"阮文陽 F271"}, 
+            "engineer_name":"阮文陽 F271"},
             },
 
         "MAM01014":{
@@ -431,7 +431,7 @@ class MachinesState(rx.State):
             "period_4":{
             "prod_op":"M75-OP40", 
             "target_qty":12, 
-            "engineer_name":"阮文陽 F271"}, 
+            "engineer_name":"阮文陽 F271"},
             },
         "MAM01017":{
             "machine_id":"MAM01017", 
@@ -451,7 +451,7 @@ class MachinesState(rx.State):
             "period_4":{
             "prod_op":"M77-OP50", 
             "target_qty":8, 
-            "engineer_name":"阮文黃 F297"}, 
+            "engineer_name":"阮文黃 F297"},
             },
 
         "MAM01019":{
@@ -472,8 +472,9 @@ class MachinesState(rx.State):
             "period_4":{
             "prod_op":"M77-OP70", 
             "target_qty":8, 
-            "engineer_name":"阮文黃 F297"}, 
+            "engineer_name":"阮文黃 F297"},
             },
+
         "MAM01020":{
             "machine_id":"MAM01020", 
             #"status":"Working",
@@ -492,13 +493,17 @@ class MachinesState(rx.State):
             "period_4":{
             "prod_op":"M77-OP70", 
             "target_qty":8, 
-            "engineer_name":"阮文黃 F297"}, 
+            "engineer_name":"阮文黃 F297"},
             },
             # kAI SIMULATION END
     }
+    
+    width_machine_id: int = 200
+    width_prod_op: int = 190
+    width_target_qty: int = 120
+    width_engineer_name: int = 190
 
     cols: list[dict[str, str]] = [
-
         # ret_list=[
         # ['vmc001', 'm77op15', 10, 'Alex', 'm77op20', 20, 'Bill', 'm77op30', 30, 'Cox', 'm77op40', 40, 'David'], 
         # ['vmc101', 'm65op15', 10, 'Allen', 'm65op20', 20, 'Banson', 'm65op30', 30, 'Carol', 'm65op40', 40, 'Denzel'], 
@@ -506,71 +511,84 @@ class MachinesState(rx.State):
         # ]
         {
             'title':'機台代號', #NOTE - MACHINE: machine_id
-            'type':'str'
+            'type':'str',
+            'width':width_machine_id,
         },
         ###
         {
-            'group':'第 1 班',
+            'group':'早班',
             'title':'件號', #NOTE - PRODUCT: prod_op
-            'type':'str'
+            'type':'str',
+            'width':width_prod_op,
         },
         {
-            'group':'第 1 班',
+            'group':'早班',
             'title':'數量', #NOTE - QUANTITY: target_qty
-            'type':'int'
+            'type':'int',
+            'width':width_target_qty,
         },
         {
-            'group':'第 1 班',
+            'group':'早班',
             'title':'操作者', #NOTE - ENGINEER: engineer_name
-            'type':'str'
+            'type':'str',
+            'width':width_engineer_name,
         },
         ###
         {
-            'group':'第 2 班',
+            'group':'午班-1',
             'title':'件號', #NOTE - PRODUCT: prod_op
-            'type':'str'
+            'type':'str',
+            'width':width_prod_op,
         },
         {
-            'group':'第 2 班',
+            'group':'午班-1',
             'title':'數量', #NOTE - QUANTITY: target_qty
-            'type':'int'
+            'type':'int',
+            'width':width_target_qty,
         },
         {
-            'group':'第 2 班',
+            'group':'午班-1',
             'title':'操作者', #NOTE - ENGINEER: engineer_name
-            'type':'str'
+            'type':'str',
+            'width':width_engineer_name,
         },
         ###
         {
-            'group':'第 3 班',
+            'group':'午班-2',
             'title':'件號', #NOTE - PRODUCT: prod_op
-            'type':'str'
+            'type':'str',
+            'width':width_prod_op,
         },
         {
-            'group':'第 3 班',
+            'group':'午班-2',
             'title':'數量', #NOTE - QUANTITY: target_qty
-            'type':'int'
+            'type':'int',
+            'width':width_target_qty,
         },
         {
-            'group':'第 3 班',
+            'group':'午班-2',
             'title':'操作者', #NOTE - ENGINEER: engineer_name
-            'type':'str'
+            'type':'str',
+            'width':width_engineer_name,
         },
         ###
         {
-            'group':'第 4 班',
+            'group':'晚班',
             'title':'件號', #NOTE - PRODUCT: prod_op
-            'type':'str'
+            'type':'str',
+            'width':width_prod_op,
         },
         {
-            'group':'第 4 班',
+            'group':'晚班',
             'title':'數量', #NOTE - QUANTITY: target_qty
-            'type':'int'
+            'type':'int',
+            'width':width_target_qty,
         },
         {
-            'group':'第 4 班',
+            'group':'晚班',
             'title':'操作者', #NOTE - ENGINEER: engineer_name
-            'type':'str'
+            'type':'str',
+            'width':width_engineer_name,
         },
         ###
 

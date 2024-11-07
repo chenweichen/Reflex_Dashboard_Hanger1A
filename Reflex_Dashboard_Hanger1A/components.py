@@ -63,7 +63,7 @@ def gen_title_grid_cell(title_period: str,
                         size_of_font: str ) -> rx.Component:
     return rc.grid_item(
         rx.box(
-            rx.text(f"班別：{title_period}", weight='bold', font_size=size_of_font),
+            rx.text(f"{title_period}", weight='bold', font_size=size_of_font),
         ), # rx.box
         col_start=col_start,
         col_end=col_end,
