@@ -75,32 +75,32 @@ def gen_title_grid_cell(title_period: str,
 
 def gen_area_1_block_cells(outer_period: str, outer_title_period: str) -> list[rx.Component]:
     return [ # 13
-        gen_title_grid_cell(outer_title_period, 1, '2', 1, '2', ['cell-border', 'cell-bgc-1'], "4.15vmin"), # Title of Period
-        gen_machine_grid_cell('VMC08024', outer_period, 2, '3', 1, '2',   ['cell-border', 'cell-bgc-1'], "1.85vmin"),
-        gen_machine_grid_cell('VMC08026', outer_period, 3, '4', 1, '2',   ['cell-border', 'cell-bgc-1'], "1.85vmin"),
-        gen_machine_grid_cell('VMC08018', outer_period, 4, '5', 1, '2',   ['cell-border', 'cell-bgc-1'], "1.85vmin"),
-        gen_machine_grid_cell('VMC08029', outer_period, 5, '6', 1, '2',   ['cell-border', 'cell-bgc-1'], "1.85vmin"),
-        gen_machine_grid_cell('VMC08031', outer_period, 6, '7', 1, '2',   ['cell-border', 'cell-bgc-1'], "1.85vmin"),
-        gen_machine_grid_cell('VMC08014', outer_period, 2, '3', 2, '3',   ['cell-border', 'cell-bgc-1'], "1.85vmin"),
-        gen_machine_grid_cell('VMC08015', outer_period, 3, '4', 2, '3',   ['cell-border', 'cell-bgc-1'], "1.85vmin"),
-        gen_machine_grid_cell('VMC08030', outer_period, 4, '5', 2, '3',   ['cell-border', 'cell-bgc-1'], "1.85vmin"),
-        gen_machine_grid_cell('MAM01022', outer_period, 6, '7', 2, '3',   ['cell-border', 'cell-bgc-1'], "1.85vmin"),
-        gen_machine_grid_cell('VMC08028', outer_period, 7, '8', 2, '3',   ['cell-border', 'cell-bgc-1'], "1.85vmin"), #10
-        gen_machine_grid_cell('VMC08027', outer_period, 8, '9', 2, '3',   ['cell-border', 'cell-bgc-1'], "1.85vmin"),
-        gen_machine_grid_cell('VMC08020', outer_period, 9, '10', 2, '3',  ['cell-border', 'cell-bgc-1'], "1.85vmin"),
-        gen_machine_grid_cell('VMC08021', outer_period, 10, '11', 2, '3', ['cell-border', 'cell-bgc-1'], "1.85vmin")
+        gen_title_grid_cell(outer_title_period, 1, '2', 1, '2', ['cell-border', 'cell-bgc-1'], "4.15vmin"), # Title of Period # 1.85vmin
+        gen_machine_grid_cell('VMC08024', outer_period, 2, '3', 1, '2',   ['cell-border', 'cell-bgc-1'], "1.90vmin"),
+        gen_machine_grid_cell('VMC08026', outer_period, 3, '4', 1, '2',   ['cell-border', 'cell-bgc-1'], "1.90vmin"),
+        gen_machine_grid_cell('VMC08018', outer_period, 4, '5', 1, '2',   ['cell-border', 'cell-bgc-1'], "1.90vmin"),
+        gen_machine_grid_cell('VMC08029', outer_period, 5, '6', 1, '2',   ['cell-border', 'cell-bgc-1'], "1.90vmin"),
+        gen_machine_grid_cell('VMC08031', outer_period, 6, '7', 1, '2',   ['cell-border', 'cell-bgc-1'], "1.90vmin"),
+        gen_machine_grid_cell('VMC08014', outer_period, 2, '3', 2, '3',   ['cell-border', 'cell-bgc-1'], "1.90vmin"),
+        gen_machine_grid_cell('VMC08015', outer_period, 3, '4', 2, '3',   ['cell-border', 'cell-bgc-1'], "1.90vmin"),
+        gen_machine_grid_cell('VMC08030', outer_period, 4, '5', 2, '3',   ['cell-border', 'cell-bgc-1'], "1.90vmin"),
+        gen_machine_grid_cell('MAM01022', outer_period, 6, '7', 2, '3',   ['cell-border', 'cell-bgc-1'], "1.90vmin"),
+        gen_machine_grid_cell('VMC08028', outer_period, 7, '8', 2, '3',   ['cell-border', 'cell-bgc-1'], "1.90vmin"), #10
+        gen_machine_grid_cell('VMC08027', outer_period, 8, '9', 2, '3',   ['cell-border', 'cell-bgc-1'], "1.90vmin"),
+        gen_machine_grid_cell('VMC08020', outer_period, 9, '10', 2, '3',  ['cell-border', 'cell-bgc-1'], "1.90vmin"),
+        gen_machine_grid_cell('VMC08021', outer_period, 10, '11', 2, '3', ['cell-border', 'cell-bgc-1'], "1.90vmin")
     ]
 
 def gen_area_2_block_cells(outer_period: str) -> list[rx.Component]:
     return [ # 10
-        gen_machine_grid_cell('VMC08013', outer_period, 2, '3', 3, '4', ['cell-border', 'cell-bgc-3'], "1.85vmin"),
-        gen_machine_grid_cell('VMC08012', outer_period, 3, '4', 3, '4', ['cell-border', 'cell-bgc-3'], "1.85vmin"),
-        gen_machine_grid_cell('VMC08019', outer_period, 4, '5', 3, '4', ['cell-border', 'cell-bgc-3'], "1.85vmin"),
-        gen_machine_grid_cell('MAM01021', outer_period, 6, '7', 3, '4', ['cell-border', 'cell-bgc-1'], "1.85vmin"),
-        gen_machine_grid_cell('MAM01010', outer_period, 1, '2', 4, '5', ['cell-border', 'cell-bgc-2'], "1.85vmin"),
-        gen_machine_grid_cell('MAM01013', outer_period, 2, '3', 4, '5', ['cell-border', 'cell-bgc-2'], "1.85vmin"),
-        gen_machine_grid_cell('MAM01014', outer_period, 3, '4', 4, '5', ['cell-border', 'cell-bgc-2'], "1.85vmin"),
-        gen_machine_grid_cell('MAM01017', outer_period, 4, '5', 4, '5', ['cell-border', 'cell-bgc-1'], "1.85vmin"),
-        gen_machine_grid_cell('MAM01019', outer_period, 5, '6', 4, '5', ['cell-border', 'cell-bgc-1'], "1.85vmin"),
-        gen_machine_grid_cell('MAM01020', outer_period, 6, '7', 4, '5', ['cell-border', 'cell-bgc-1'], "1.85vmin")
+        gen_machine_grid_cell('VMC08013', outer_period, 2, '3', 3, '4', ['cell-border', 'cell-bgc-3'], "1.90vmin"),
+        gen_machine_grid_cell('VMC08012', outer_period, 3, '4', 3, '4', ['cell-border', 'cell-bgc-3'], "1.90vmin"),
+        gen_machine_grid_cell('VMC08019', outer_period, 4, '5', 3, '4', ['cell-border', 'cell-bgc-3'], "1.90vmin"),
+        gen_machine_grid_cell('MAM01021', outer_period, 6, '7', 3, '4', ['cell-border', 'cell-bgc-1'], "1.90vmin"),
+        gen_machine_grid_cell('MAM01010', outer_period, 1, '2', 4, '5', ['cell-border', 'cell-bgc-2'], "1.90vmin"),
+        gen_machine_grid_cell('MAM01013', outer_period, 2, '3', 4, '5', ['cell-border', 'cell-bgc-2'], "1.90vmin"),
+        gen_machine_grid_cell('MAM01014', outer_period, 3, '4', 4, '5', ['cell-border', 'cell-bgc-2'], "1.90vmin"),
+        gen_machine_grid_cell('MAM01017', outer_period, 4, '5', 4, '5', ['cell-border', 'cell-bgc-1'], "1.90vmin"),
+        gen_machine_grid_cell('MAM01019', outer_period, 5, '6', 4, '5', ['cell-border', 'cell-bgc-1'], "1.90vmin"),
+        gen_machine_grid_cell('MAM01020', outer_period, 6, '7', 4, '5', ['cell-border', 'cell-bgc-1'], "1.90vmin")
     ]

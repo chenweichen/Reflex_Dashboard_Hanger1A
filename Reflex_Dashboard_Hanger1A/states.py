@@ -18,22 +18,22 @@ class MachinesState(rx.State):
             "period_1":{
             "prod_op":"M77-OP15", 
             "target_qty":20, 
-            "engineer_name":"阮黃英 F351"},
+            "engineer_name":""},
             ###
             "period_2":{
             "prod_op":"M77-OP15",
-            "target_qty":100, 
-            "engineer_name":"阮黃英 F351"},
+            "target_qty":20, 
+            "engineer_name":""},
             ###
             "period_3":{
             "prod_op":"M77-OP15", 
-            "target_qty":200, 
-            "engineer_name":"阮黃英 F351"},
+            "target_qty":20, 
+            "engineer_name":""},
             ###
             "period_4":{
             "prod_op":"M77-OP15", 
-            "target_qty":200, 
-            "engineer_name":"阮黃英 F351"},
+            "target_qty":20, 
+            "engineer_name":""},
             ###
             },
 
@@ -43,82 +43,82 @@ class MachinesState(rx.State):
             "period_1":{
             "prod_op":"M77-OP15", 
             "target_qty":20, 
-            "engineer_name":"范文成 F279"},
+            "engineer_name":"阮黃英 F351"},
             "period_2":{
             "prod_op":"M77-OP15", 
-            "target_qty":300, 
-            "engineer_name":"范文成 F279"},
+            "target_qty":20, 
+            "engineer_name":"阮黃英 F351"},
             "period_3":{
             "prod_op":"M77-OP15", 
-            "target_qty":200, 
-            "engineer_name":"范文成 F279"},
+            "target_qty":20, 
+            "engineer_name":"阮黃英 F351"},
             "period_4":{
             "prod_op":"M77-OP15", 
-            "target_qty":200, 
-            "engineer_name":"范文成 F279"},
+            "target_qty":20, 
+            "engineer_name":"阮黃英 F351"},
             },
 
         "VMC08018":{
             "machine_id":"VMC08018", 
             #"status":"Working",
             "period_1":{
-            "prod_op":"M77-OP30", 
+            "prod_op":"M77-OP20", 
             "target_qty":16, 
-            "engineer_name":"范文成 F279"},
+            "engineer_name":"阮黃英 F351"},
             "period_2":{
-            "prod_op":"M77-OP30", 
-            "target_qty":0, 
-            "engineer_name":"范文成 F279"},
+            "prod_op":"M77-OP20", 
+            "target_qty":16, 
+            "engineer_name":"阮黃英 F351"},
             "period_3":{
-            "prod_op":"M77-OP30", 
-            "target_qty":0, 
-            "engineer_name":"范文成 F279"},
+            "prod_op":"M77-OP20", 
+            "target_qty":16, 
+            "engineer_name":"阮黃英 F351"},
             "period_4":{
-            "prod_op":"M77-OP30", 
-            "target_qty":0, 
-            "engineer_name":"范文成 F279"},
+            "prod_op":"M77-OP20", 
+            "target_qty":16, 
+            "engineer_name":"阮黃英 F351"},
             },
 
         "VMC08029":{
             "machine_id":"VMC08029", 
             #"status":"Working",
             "period_1":{
-            "prod_op":"M77-OP20", 
+            "prod_op":"M77-OP30", 
             "target_qty":16, 
-            "engineer_name":"范文成 F279"},
+            "engineer_name":"葉恒成 M1160"},
             "period_2":{
-            "prod_op":"M77-OP20", 
-            "target_qty":0, 
-            "engineer_name":"范文成 F279"},
+            "prod_op":"M77-OP30", 
+            "target_qty":16, 
+            "engineer_name":"葉恒成 M1160"},
             "period_3":{
-            "prod_op":"M77-OP20", 
-            "target_qty":0, 
-            "engineer_name":"范文成 F279"},
+            "prod_op":"M77-OP30", 
+            "target_qty":16, 
+            "engineer_name":"葉恒成 M1160"},
             "period_4":{
-            "prod_op":"M77-OP20", 
-            "target_qty":0, 
-            "engineer_name":"范文成 F279"},
+            "prod_op":"M77-OP30", 
+            "target_qty":16, 
+            "engineer_name":"葉恒成 M1160"},
             },
 
         "VMC08031":{
             "machine_id":"VMC08031", 
             #"status":"Working",
             "period_1":{
-            "prod_op":"M77-OP45", 
+            "prod_op":"M77-OP30", 
             "target_qty":20, 
-            "engineer_name":"范文成 F279"},
+            "engineer_name":"葉恒成 M1160"},
             "period_2":{
-            "prod_op":"M77-OP45", 
+            "prod_op":"M77-OP30", 
             "target_qty":20, 
-            "engineer_name":"范文成 F279"},
+            "engineer_name":"葉恒成 M1160"},
             "period_3":{
-            "prod_op":"M77-OP45", 
+            "prod_op":"M77-OP30", 
             "target_qty":20, 
-            "engineer_name":"范文成 F279"},
+            "engineer_name":"葉恒成 M1160"},
             "period_4":{
-            "prod_op":"M77-OP45", 
+            "prod_op":"M77-OP30", 
             "target_qty":20, 
-            "engineer_name":"范文成 F279"},
+            "engineer_name":"葉恒成 M1160"},
             },
 
         "VMC08014":{
@@ -127,19 +127,19 @@ class MachinesState(rx.State):
             "period_1":{
             "prod_op":"M77-OP60", 
             "target_qty":15, 
-            "engineer_name":"阮黃英 F351"},
+            "engineer_name":"范智南 F243"},
             "period_2":{
             "prod_op":"M77-OP60", 
             "target_qty":15, 
-            "engineer_name":"阮黃英 F351"},
+            "engineer_name":"范智南 F243"},
             "period_3":{
             "prod_op":"M77-OP60", 
             "target_qty":15, 
-            "engineer_name":"阮黃英 F351"},
+            "engineer_name":"范智南 F243"},
             "period_4":{
             "prod_op":"M77-OP60", 
             "target_qty":15, 
-            "engineer_name":"阮黃英 F351"},
+            "engineer_name":"范智南 F243"},
             },
 
         "VMC08015":{
@@ -148,40 +148,40 @@ class MachinesState(rx.State):
             "period_1":{
             "prod_op":"M77-OP60", 
             "target_qty":15, 
-            "engineer_name":"阮黃英 F351"},
+            "engineer_name":"范智南 F243"},
             "period_2":{
             "prod_op":"M77-OP60", 
             "target_qty":15, 
-            "engineer_name":"阮黃英 F351"},
+            "engineer_name":"范智南 F243"},
             "period_3":{
             "prod_op":"M77-OP60", 
             "target_qty":15, 
-            "engineer_name":"阮黃英 F351"},
+            "engineer_name":"范智南 F243"},
             "period_4":{
             "prod_op":"M77-OP60", 
             "target_qty":15, 
-            "engineer_name":"阮黃英 F351"},
+            "engineer_name":"范智南 F243"},
             },
 
         "VMC08030":{
             "machine_id":"VMC08030", 
             #"status":"Working",
             "period_1":{
-            "prod_op":"M77-OP30", 
+            "prod_op":"M77-OP20", 
             "target_qty":20, 
-            "engineer_name":"范文成 F279"},
+            "engineer_name":"楊俊英 M2111"},
             "period_2":{
-            "prod_op":"M77-OP30", 
+            "prod_op":"M77-OP20", 
             "target_qty":20, 
-            "engineer_name":"范文成 F279"},
+            "engineer_name":"楊俊英 M2111"},
             "period_3":{
-            "prod_op":"M77-OP30", 
+            "prod_op":"M77-OP20", 
             "target_qty":20, 
-            "engineer_name":"范文成 F279"},
+            "engineer_name":"楊俊英 M2111"},
             "period_4":{
-            "prod_op":"M77-OP30", 
+            "prod_op":"M77-OP20", 
             "target_qty":20, 
-            "engineer_name":"范文成 F279"},
+            "engineer_name":"楊俊英 M2111"},
             },
 
         "MAM01022":{
@@ -190,19 +190,19 @@ class MachinesState(rx.State):
             "period_1":{
             "prod_op":"M77-OP50", 
             "target_qty":8, 
-            "engineer_name":"阮文黃 F297"},
+            "engineer_name":"葉恒成 M1160"},
             "period_2":{
             "prod_op":"M77-OP50", 
             "target_qty":8, 
-            "engineer_name":"阮文黃 F297"},
+            "engineer_name":"葉恒成 M1160"},
             "period_3":{
             "prod_op":"M77-OP50", 
             "target_qty":8, 
-            "engineer_name":"阮文黃 F297"},
+            "engineer_name":"葉恒成 M1160"},
             "period_4":{
             "prod_op":"M77-OP50", 
             "target_qty":8, 
-            "engineer_name":"阮文黃 F297"},
+            "engineer_name":"葉恒成 M1160"},
             },
 
         "VMC08028":{
@@ -211,61 +211,61 @@ class MachinesState(rx.State):
             "period_1":{
             "prod_op":"M77-OP45", 
             "target_qty":16, 
-            "engineer_name":"范文成 F279"},
+            "engineer_name":"裴勇切 F354"},
             "period_2":{
             "prod_op":"M77-OP45", 
             "target_qty":16, 
-            "engineer_name":"范文成 F279"},
+            "engineer_name":"裴勇切 F354"},
             "period_3":{
             "prod_op":"M77-OP45", 
             "target_qty":16, 
-            "engineer_name":"范文成 F279"},
+            "engineer_name":"裴勇切 F354"},
             "period_4":{
             "prod_op":"M77-OP45", 
             "target_qty":16, 
-            "engineer_name":"范文成 F279"},
+            "engineer_name":"裴勇切 F354"},
             },
 
         "VMC08027":{
-            "machine_id":"VMC08028", 
+            "machine_id":"VMC08027", 
             #"status":"Working",
             "period_1":{
             "prod_op":"M75-OP42", 
             "target_qty":16, 
-            "engineer_name":"范文成 F279"},
+            "engineer_name":"裴勇切 F354"},
             "period_2":{
             "prod_op":"M75-OP42", 
             "target_qty":16, 
-            "engineer_name":"范文成 F279"},
+            "engineer_name":"裴勇切 F354"},
             "period_3":{
             "prod_op":"M75-OP42", 
             "target_qty":16, 
-            "engineer_name":"范文成 F279"},
+            "engineer_name":"裴勇切 F354"},
             "period_4":{
             "prod_op":"M75-OP42", 
             "target_qty":16, 
-            "engineer_name":"范文成 F279"},
+            "engineer_name":"裴勇切 F354"},
             },
 
         "VMC08020":{
             "machine_id":"VMC08020", 
             #"status":"Working",
             "period_1":{
-            "prod_op":"M76-OP30", 
-            "target_qty":24, 
-            "engineer_name":"范文成 F279"},
+            "prod_op":"M75-OP42", 
+            "target_qty":16, 
+            "engineer_name":""},
             "period_2":{
-            "prod_op":"M76-OP30", 
-            "target_qty":24, 
-            "engineer_name":"范文成 F279"},
+            "prod_op":"M75-OP42", 
+            "target_qty":16, 
+            "engineer_name":""},
             "period_3":{
-            "prod_op":"M76-OP30", 
-            "target_qty":24, 
-            "engineer_name":"范文成 F279"},
+            "prod_op":"M75-OP42", 
+            "target_qty":16, 
+            "engineer_name":""},
             "period_4":{
-            "prod_op":"M76-OP30", 
-            "target_qty":24, 
-            "engineer_name":"范文成 F279"},
+            "prod_op":"M75-OP42", 
+            "target_qty":16, 
+            "engineer_name":""},
             },
 
         "VMC08021":{
@@ -274,19 +274,19 @@ class MachinesState(rx.State):
             "period_1":{
             "prod_op":"M76-OP30", 
             "target_qty":24, 
-            "engineer_name":"范文成 F279"},
+            "engineer_name":"裴勇切 F354"},
             "period_2":{
             "prod_op":"M76-OP30", 
             "target_qty":24, 
-            "engineer_name":"范文成 F279"},
+            "engineer_name":"裴勇切 F354"},
             "period_3":{
             "prod_op":"M76-OP30", 
             "target_qty":24, 
-            "engineer_name":"范文成 F279"},
+            "engineer_name":"裴勇切 F354"},
             "period_4":{
             "prod_op":"M76-OP30", 
             "target_qty":24, 
-            "engineer_name":"范文成 F279"},
+            "engineer_name":"裴勇切 F354"},
             },
         "VMC08013":{
             "machine_id":"VMC08013", 
@@ -294,19 +294,19 @@ class MachinesState(rx.State):
             "period_1":{
             "prod_op":"M76-OP40", 
             "target_qty":8, 
-            "engineer_name":"范智南 F243"},
+            "engineer_name":"阮黃英 F351"},
             "period_2":{
             "prod_op":"M76-OP40", 
             "target_qty":8, 
-            "engineer_name":"范智南 F243"},
+            "engineer_name":"阮黃英 F351"},
             "period_3":{
             "prod_op":"M76-OP40", 
             "target_qty":8, 
-            "engineer_name":"范智南 F243"},
+            "engineer_name":"阮黃英 F351"},
             "period_4":{
             "prod_op":"M76-OP40", 
             "target_qty":8, 
-            "engineer_name":"范智南 F243"},
+            "engineer_name":"阮黃英 F351"},
             },
 
         "VMC08012":{
@@ -315,19 +315,19 @@ class MachinesState(rx.State):
             "period_1":{
             "prod_op":"M76-OP40", 
             "target_qty":16, 
-            "engineer_name":"范智南 F243"},
+            "engineer_name":"阮黃英 F351"},
             "period_2":{
             "prod_op":"M76-OP40", 
             "target_qty":16, 
-            "engineer_name":"范智南 F243"},
+            "engineer_name":"阮黃英 F351"},
             "period_3":{
             "prod_op":"M76-OP40", 
             "target_qty":16, 
-            "engineer_name":"范智南 F243"},
+            "engineer_name":"阮黃英 F351"},
             "period_4":{
             "prod_op":"M76-OP40", 
             "target_qty":16, 
-            "engineer_name":"范智南 F243"},
+            "engineer_name":"阮黃英 F351"},
             },
 
         "VMC08019":{
@@ -336,19 +336,19 @@ class MachinesState(rx.State):
             "period_1":{
             "prod_op":"M76-OP40", 
             "target_qty":8, 
-            "engineer_name":"范智南 F243"},
+            "engineer_name":"楊俊英 M2111"},
             "period_2":{
             "prod_op":"M76-OP40", 
             "target_qty":8, 
-            "engineer_name":"范智南 F243"},
+            "engineer_name":"楊俊英 M2111"},
             "period_3":{
             "prod_op":"M76-OP40", 
             "target_qty":8, 
-            "engineer_name":"范智南 F243"},
+            "engineer_name":"楊俊英 M2111"},
             "period_4":{
             "prod_op":"M76-OP40", 
             "target_qty":8, 
-            "engineer_name":"范智南 F243"},
+            "engineer_name":"楊俊英 M2111"},
             },
 
         "MAM01021":{
@@ -357,19 +357,19 @@ class MachinesState(rx.State):
             "period_1":{
             "prod_op":"M77-OP70", 
             "target_qty":8, 
-            "engineer_name":"阮文黃 F297"},
+            "engineer_name":"潘雅琪 M2059"},
             "period_2":{
             "prod_op":"M77-OP70", 
             "target_qty":8, 
-            "engineer_name":"阮文黃 F297"},
+            "engineer_name":"潘雅琪 M2059"},
             "period_3":{
             "prod_op":"M77-OP70", 
             "target_qty":8, 
-            "engineer_name":"阮文黃 F297"},
+            "engineer_name":"潘雅琪 M2059"},
             "period_4":{
             "prod_op":"M77-OP70", 
             "target_qty":8, 
-            "engineer_name":"阮文黃 F297"},
+            "engineer_name":"潘雅琪 M2059"},
             },
 
         "MAM01010":{
@@ -417,21 +417,21 @@ class MachinesState(rx.State):
             "machine_id":"MAM01014", 
             #"status":"Working",
             "period_1":{
-            "prod_op":"M75-OP40", 
-            "target_qty":12, 
-            "engineer_name":"阮文陽 F271"},
+            "prod_op":"T05-OP20", 
+            "target_qty":15, 
+            "engineer_name":"阮文黃 F297"},
             "period_2":{
-            "prod_op":"M75-OP40", 
-            "target_qty":12, 
-            "engineer_name":"阮文陽 F271"},
+            "prod_op":"T05-OP20", 
+            "target_qty":15, 
+            "engineer_name":"阮文黃 F297"},
             "period_3":{
-            "prod_op":"M75-OP40", 
-            "target_qty":12, 
-            "engineer_name":"阮文陽 F271"},
+            "prod_op":"T05-OP20", 
+            "target_qty":15, 
+            "engineer_name":"阮文黃 F297"},
             "period_4":{
-            "prod_op":"M75-OP40", 
-            "target_qty":12, 
-            "engineer_name":"阮文陽 F271"},
+            "prod_op":"T05-OP20", 
+            "target_qty":15, 
+            "engineer_name":"阮文黃 F297"},
             },
         "MAM01017":{
             "machine_id":"MAM01017", 
@@ -439,40 +439,40 @@ class MachinesState(rx.State):
             "period_1":{
             "prod_op":"M77-OP50", 
             "target_qty":8, 
-            "engineer_name":"阮文黃 F297"},
+            "engineer_name":"楊俊英 M2111"},
             "period_2":{
             "prod_op":"M77-OP50", 
             "target_qty":8, 
-            "engineer_name":"阮文黃 F297"},
+            "engineer_name":"楊俊英 M2111"},
             "period_3":{
             "prod_op":"M77-OP50", 
             "target_qty":8, 
-            "engineer_name":"阮文黃 F297"},
+            "engineer_name":"楊俊英 M2111"},
             "period_4":{
             "prod_op":"M77-OP50", 
             "target_qty":8, 
-            "engineer_name":"阮文黃 F297"},
+            "engineer_name":"楊俊英 M2111"},
             },
 
         "MAM01019":{
-            "machine_id":"MAM01017", 
+            "machine_id":"MAM01019", 
             #"status":"Working",
             "period_1":{
-            "prod_op":"M77-OP70", 
+            "prod_op":"M77-OP50", 
             "target_qty":8, 
-            "engineer_name":"阮文黃 F297"},
+            "engineer_name":"楊俊英 M2111"},
             "period_2":{
-            "prod_op":"M77-OP70", 
+            "prod_op":"M77-OP50", 
             "target_qty":8, 
-            "engineer_name":"阮文黃 F297"},
+            "engineer_name":"楊俊英 M2111"},
             "period_3":{
-            "prod_op":"M77-OP70", 
+            "prod_op":"M77-OP50", 
             "target_qty":8, 
-            "engineer_name":"阮文黃 F297"},
+            "engineer_name":"楊俊英 M2111"},
             "period_4":{
-            "prod_op":"M77-OP70", 
+            "prod_op":"M77-OP50", 
             "target_qty":8, 
-            "engineer_name":"阮文黃 F297"},
+            "engineer_name":"楊俊英 M2111"},
             },
 
         "MAM01020":{
@@ -481,19 +481,19 @@ class MachinesState(rx.State):
             "period_1":{
             "prod_op":"M77-OP70", 
             "target_qty":8, 
-            "engineer_name":"阮文黃 F297"},
+            "engineer_name":"潘雅琪 M2059"},
             "period_2":{
             "prod_op":"M77-OP70", 
             "target_qty":8, 
-            "engineer_name":"阮文黃 F297"},
+            "engineer_name":"潘雅琪 M2059"},
             "period_3":{
             "prod_op":"M77-OP70", 
             "target_qty":8, 
-            "engineer_name":"阮文黃 F297"},
+            "engineer_name":"潘雅琪 M2059"},
             "period_4":{
             "prod_op":"M77-OP70", 
             "target_qty":8, 
-            "engineer_name":"阮文黃 F297"},
+            "engineer_name":"潘雅琪 M2059"},
             },
             # kAI SIMULATION END
     }
@@ -623,7 +623,7 @@ class MachinesState(rx.State):
 
     def field_helper_col_period(self, col_num):
         if col_num in (0, ):
-            return 'mahcine_id'
+            return 'machine_id'
         elif col_num in (1,2,3):
             return 'period_1'
         elif col_num in (4,5,6):
