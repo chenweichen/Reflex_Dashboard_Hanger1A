@@ -123,7 +123,7 @@ def index() -> rx.Component:
             value="tab4",
         ),
         rx.tabs.content( #TODO - th period
-            data_presentation_tab(gen_area_1_block_cells('period_4', '晚班 21:30 ~ 08:00'), gen_area_2_block_cells('period_3')),
+            data_presentation_tab(gen_area_1_block_cells('period_4', '晚班 21:30 ~ 08:00'), gen_area_2_block_cells('period_4')),
             value="tab5",
         ),
         defalut_value="tab1",
